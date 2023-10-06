@@ -2,15 +2,7 @@ import connectMongoDB from "@/libs/mongodb";
 import Catatan from "@/models/catatan";
 import { NextResponse } from "next/server";
 
-interface Itopic {
-  params: any;
-  nextUrl: any;
-  json: any;
-  title: string;
-  description: string;
-}
-
-export async function PUT(request: Itopic, { params }: Itopic) {
+export async function PUT(request: any, { params }: any) {
   const { id } = params;
   const { newTitle: title, newDescription: description } = await request.json();
   await connectMongoDB();
@@ -18,7 +10,7 @@ export async function PUT(request: Itopic, { params }: Itopic) {
   return NextResponse.json({ message: "Topic updated" }, { status: 200 });
 }
 
-export async function GET(request: Itopic, { params }: Itopic) {
+export async function GET(request: any, { params }: any) {
   const { id } = params;
   await connectMongoDB();
   const catatan = await Catatan.findOne({ _id: id });

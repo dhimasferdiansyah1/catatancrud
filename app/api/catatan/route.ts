@@ -2,14 +2,7 @@ import connectMongoDB from "@/libs/mongodb";
 import Catatan from "@/models/catatan";
 import { NextResponse } from "next/server";
 
-interface Itopic {
-  nextUrl: any;
-  json: any;
-  title: string;
-  description: string;
-}
-
-export async function POST(request: Itopic) {
+export async function POST(request: any) {
   const { title, description } = await request.json();
   await connectMongoDB();
   await Catatan.create({ title, description });
@@ -22,7 +15,7 @@ export async function GET() {
   return NextResponse.json({ catatans });
 }
 
-export async function DELETE(request: Itopic) {
+export async function DELETE(request: any) {
   const id = request.nextUrl.searchParams.get("id");
   await connectMongoDB();
   await Catatan.findByIdAndDelete(id);
