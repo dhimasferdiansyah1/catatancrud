@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import RemoveButton from "./RemoveButton";
 
-const getCatatans = async () => {
+const getCatatan = async () => {
   try {
     const res = await fetch("http://localhost:3000/api/catatan", {
       cache: "no-store",
@@ -19,7 +19,7 @@ const getCatatans = async () => {
 };
 
 export default async function CatatanList() {
-  const { catatans } = await getCatatans();
+  const { catatans } = await getCatatan();
   return (
     <>
       {catatans.map((t: any) => (
