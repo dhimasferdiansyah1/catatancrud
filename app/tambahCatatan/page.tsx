@@ -17,8 +17,7 @@ export default function TambahCatatan() {
     }
 
     try {
-      const apiUrl = process.env.API_URL;
-      const res = await fetch(`${apiUrl}/api/catatan`, {
+      const res = await fetch(`http://localhost:3000/api/catatan`, {
         cache: "no-store",
         method: "POST",
         headers: {
