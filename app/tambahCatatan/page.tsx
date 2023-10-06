@@ -17,7 +17,7 @@ export default function TambahCatatan() {
     }
 
     try {
-      const res = await fetch(`http://127.0.0.1:3000/api/catatan`, {
+      const res = await fetch("http://127.0.0.1:3000/api/catatan", {
         cache: "no-store",
         method: "POST",
         headers: {
