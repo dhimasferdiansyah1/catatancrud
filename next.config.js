@@ -1,5 +1,5 @@
 env: {
-  API_URL: "https://catatancrud.vercel.app";
+  API_URL: "http://localhost:3000";
 }
 
 /** @type {import('next').NextConfig} */
