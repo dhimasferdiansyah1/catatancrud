@@ -7,7 +7,8 @@ export default function RemoveButton({ id }: any) {
     const confirmed = confirm("Kamu yakin?");
 
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/catatan?id=${id}`, {
+      const apiUrl = process.env.API_URL;
+      const res = await fetch(`${apiUrl}/api/catatan?id=${id}`, {
         cache: "no-store",
         method: "DELETE",
       });
