@@ -19,8 +19,18 @@ const getCatatan = async () => {
   }
 };
 
-export default async function CatatanList() {
-  const { catatans } = await getCatatan();
+export async function getServerSideProps() {
+  const catatans = await getCatatan();
+
+  return {
+    props: {
+      // pass the catatans prop
+      catatans,
+    },
+  };
+}
+
+export default async function CatatanList(catatans: any) {
   return (
     <>
       {catatans.map((t: any) => (
