@@ -7,7 +7,7 @@ export async function PUT(request: any, { params }: any) {
   const { newTitle: title, newDescription: description } = await request.json();
   await connectMongoDB();
   await Catatan.findByIdAndUpdate(id, { title, description });
-  return NextResponse.json({ message: "Topic updated" }, { status: 200 });
+  return NextResponse.json({ message: "Catatan updated" }, { status: 200 });
 }
 
 export async function GET(request: any, { params }: any) {
