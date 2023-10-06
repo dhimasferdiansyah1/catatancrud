@@ -2,15 +2,6 @@ import React from "react";
 import Link from "next/link";
 import RemoveButton from "./RemoveButton";
 
-interface Itopic {
-  id: any;
-  _id: any;
-  nextUrl: any;
-  json: any;
-  title: string;
-  description: string;
-}
-
 const getCatatans = async () => {
   try {
     const res = await fetch("http://localhost:3000/api/catatan", {

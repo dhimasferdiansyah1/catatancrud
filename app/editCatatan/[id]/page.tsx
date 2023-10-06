@@ -1,6 +1,6 @@
 import EditCatatanForm from "@/app/components/EditCatatanForm";
 
-const getTopicById = async (id: any) => {
+const getCatatanById = async (id: any) => {
   try {
     const res = await fetch(`http://localhost:3000/api/catatan/${id}`, {
       cache: "no-store",
@@ -17,7 +17,7 @@ const getTopicById = async (id: any) => {
 
 export default async function EditCatatan({ params }: any) {
   const { id }: any = params;
-  const { catatan }: any = await getTopicById(id);
+  const { catatan }: any = await getCatatanById(id);
   const { title, description }: any = catatan;
 
   return <EditCatatanForm id={id} title={title} description={description} />;

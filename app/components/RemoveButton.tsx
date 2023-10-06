@@ -1,15 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 
-interface Itopic {
-  id: any;
-  _id: number;
-  nextUrl: any;
-  json: any;
-  title: string;
-  description: string;
-}
-
 export default function RemoveButton({ id }: any) {
   const router = useRouter();
   const removeTopic = async () => {
@@ -29,7 +20,7 @@ export default function RemoveButton({ id }: any) {
   return (
     <button
       onClick={removeTopic}
-      className="px-4 py-2 rounded-md bg-red-500 hover:bg-red-400"
+      className="rounded-md bg-red-500 px-4 py-2 hover:bg-red-400"
     >
       Hapus
     </button>
