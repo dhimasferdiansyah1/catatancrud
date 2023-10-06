@@ -1,9 +1,8 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 
-export default function tambahCatatan() {
+export default function TambahCatatan() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
