@@ -22,6 +22,15 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "libs/mongodb.ts",
+    "app/api/catatan/route.ts",
+    "libs/mongodb.ts",
+    "app/api/catatan/route.ts"
+  ],
   "exclude": ["node_modules"]
 }
