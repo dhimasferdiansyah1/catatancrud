@@ -2,7 +2,7 @@ import EditCatatanForm from "@/app/components/EditCatatanForm";
 
 const getCatatanById = async (id: any) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/catatan/${id}`, {
+    const res = await fetch(process.env.URL + "/api/catatan/${id}", {
       cache: "no-store",
     });
     if (!res.ok) {

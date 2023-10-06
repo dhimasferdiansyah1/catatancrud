@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -17,7 +16,7 @@ export default function TambahCatatan() {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/catatan", {
+      const res = await fetch(process.env.URL + "/api/catatan", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
