@@ -12,7 +12,8 @@ export default function EditCatatanForm({ id, title, description }: any) {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://127.0.0.1:3000/api/catatan/${id}", {
+      const apiUrl = process.env.API_URL;
+      const res = await fetch(`${apiUrl}/api/catatan/${id}`, {
         cache: "no-store",
         method: "PUT",
         headers: {

@@ -4,7 +4,8 @@ import RemoveButton from "./RemoveButton";
 
 const getCatatan = async () => {
   try {
-    const res = await fetch("http://127.0.0.1:3000/api/catatan", {
+    const apiUrl = process.env.API_URL;
+    const res = await fetch(`${apiUrl}/api/catatan`, {
       cache: "no-store",
     });
 
