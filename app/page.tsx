@@ -1,4 +1,4 @@
-import CatatanList from "./components/CatatanList";
+import CatatanList from "../components/CatatanList";
 
 export const dynamic = "force-dynamic";
 

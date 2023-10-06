@@ -1,4 +1,4 @@
-import EditCatatanForm from "@/app/components/EditCatatanForm";
+import EditCatatanForm from "@/components/EditCatatanForm";
 
 const getCatatanById = async (id: any) => {
   try {
